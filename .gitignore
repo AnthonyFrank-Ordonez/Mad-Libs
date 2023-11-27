@@ -1,0 +1,14 @@
+# Ignore story_template JSON file
+story_template.JSON
+
+# ignore all temp folder
+temp/
+
+# Ignore all the log files
+.log
+
+# ignore the .idea folders
+.idea/
+
+# ignore the __pycache__ folder
+__pycache__/
