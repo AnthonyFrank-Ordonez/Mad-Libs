@@ -27,9 +27,9 @@ def create_storyboard(templates: dict):
     """
     # initialize an empty list and ask the user for storyboard input from the choices
     user_inputs: dict = {}
-    story_choice: str = input(initial_question)
 
-    while story_choice not in ('exit', "Exit"):
+    # walrus operator to continually get user input from the user after creating the storyboard
+    while (story_choice := input(initial_question)) not in ('exit', "Exit"):
 
         # if statement to check if  the user choice of story is on the list
         if story := get_story(story_choice, templates):
@@ -60,9 +60,6 @@ def create_storyboard(templates: dict):
         else:
             # if the user input is not on the valid choice
             print('KEY ERROR: INVALID CHOICE!\n')
-
-        # re-initialize the question and ask the user to what story he/she wants to create
-        story_choice = input('What story do you want to create from the choices: ')
 
     else:
         print('Exiting the system please wait...')
